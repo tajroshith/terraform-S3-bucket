@@ -30,6 +30,8 @@ We have to provide bucket name and the key which is the location where the state
 terraform init
 ```
 - _Screenshot_
+
+
 ![](screenshot.jpg)
 
 As there was a pre existing terraform state file, terraform will now copy our state file to our backend S3 bucket.
