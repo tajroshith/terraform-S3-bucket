@@ -79,7 +79,7 @@ To create and plan the architecture using the following command
 terraform plan
 ```
 
-Applying the above architecture to our AWS using the following command
+Applying and executing the plan
 
 ```sh
 terraform apply
