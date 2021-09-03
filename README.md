@@ -88,3 +88,11 @@ terraform apply
 Further checking on our S3 bucket we could see that the tfstate file has appeared in it.
 
 ![](02.jpg)
+
+
+When we check our local directory we could see that the tf state file in the directory has become empty
+
+```sh
+taj@ubuntu:~$ ls -l
+-rw-rw-r-- 1 taj taj    0 Sep 2 23:37 terraform.tfstate
+```
