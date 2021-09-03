@@ -34,7 +34,10 @@ The Following policy will allow an exisiting IAM user to get access to S3 Bucket
 ```
 
 ### S3 Bucket
+
 I have already created an S3 bucket with versioning enabled.
+
+![](01.jpg)
 
 ### Creating Backend
 
@@ -65,3 +68,5 @@ terraform init
 As there was a pre existing terraform state file, terraform will now copy our state file to our backend S3 bucket.
 
 Further checking on our S3 bucket we could see that the tfstate file has appeared in it.
+
+![](02.jpg)
