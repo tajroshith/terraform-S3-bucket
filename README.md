@@ -7,10 +7,38 @@ With remote state, Terraform writes the state data to a remote data store, which
 
 ### Pre-requisites for this project
 
--  IAM User with S3 Admin access
 -  Need to have S3 bucket created
+-  IAM User with S3 Admin access
+-  IAM User with Privilege to access s3 bucket
+
+The Following policy will allow an exisiting IAM user to get access to S3 Bucket.
+
+```sh
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::mybucket"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": "arn:aws:s3:::mybucket/path/to/my/key"
+    }
+  ]
+}
+
+```
+
+### S3 Bucket
+I have already created an S3 bucket with versioning enabled.
 
 ### Creating Backend
+
+We now add the following code to our main.tf file (or any other)terraform file in our working directory
 
 ```sh
 terraform {
@@ -35,3 +63,5 @@ terraform init
 ![](screenshot.jpg)
 
 As there was a pre existing terraform state file, terraform will now copy our state file to our backend S3 bucket.
+
+Further checking on our S3 bucket we could see that the tfstate file has appeared in it.
