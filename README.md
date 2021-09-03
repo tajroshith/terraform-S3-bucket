@@ -67,6 +67,24 @@ terraform init
 
 As there was a pre existing terraform state file, terraform will now copy our state file to our backend S3 bucket.
 
+Now lets validate the terraform files using the following command
+
+```sh
+terraform validate
+```
+
+To create and plan the architecture using the following command
+
+```sh
+terraform plan
+```
+
+Applying the above architecture to our AWS using the following command
+
+```sh
+terraform apply
+```
+
 Further checking on our S3 bucket we could see that the tfstate file has appeared in it.
 
 ![](02.jpg)
