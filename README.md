@@ -90,7 +90,7 @@ Further checking on our S3 bucket we could see that the tfstate file has appeare
 ![](02.jpg)
 
 
-When we check our local directory we could see that the tf state file in the directory has become empty
+When we check our local directory we could see that the tf state file in the local directory has become empty
 
 ```sh
 taj@ubuntu:~$ ls -l
