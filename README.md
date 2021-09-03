@@ -98,5 +98,5 @@ taj@ubuntu:~$ ls -l
 ```
 
 ### Conclusion
-We successfully created an S3 backend to store our statefile thereby making it easier to manage and secure.
+We successfully created an S3 backend to store our statefile thereby making it easier to manage and secure our infrastructure
 
