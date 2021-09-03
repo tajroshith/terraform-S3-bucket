@@ -96,3 +96,7 @@ When we check our local directory we could see that the tf state file in the loc
 taj@ubuntu:~$ ls -l
 -rw-rw-r-- 1 taj taj    0 Sep 2 23:37 terraform.tfstate
 ```
+
+### Conclusion
+We successfully created an S3 backend to store our statefile thereby making it easier to manage and secure.
+
